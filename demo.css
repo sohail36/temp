@@ -1,0 +1,65 @@
+body{
+    padding: 0;
+    margin: 0;
+    background:linear-gradient(90deg,blue,pink);
+    width: 100vh;
+    height: 100vh;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-125px,-150px);
+    width: 400px;
+    height: 400px;
+    background-color: darkslateblue;
+    border-radius: 2rem;
+}
+
+.box .header{
+    position: relative;
+    text-align:center;
+    margin: 40px;
+}
+
+.box .formdata{
+    text-align: center;
+    position: relative;
+    margin: 40px;
+    width: auto;
+    border-bottom: 2px solid black;
+}
+
+.box .formdata input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    height: 30px;
+    font-size: 21px;
+    margin: 0px;
+}
+
+.box .formdata span::before{
+    content: attr(place);
+    position: absolute;
+    left: 0px;
+    transform: translate(0px,10px);
+    font-size: 20px;
+}
+
+.box .formdata span::after{
+    content: '';
+    position: absolute;
+    
+}
+
+.box .formdata input:focus~span{
+    content: attr(place);
+    transform:translate(0px,-20px);
+}
+
+
+
